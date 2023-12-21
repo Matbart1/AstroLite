@@ -1,5 +1,6 @@
 /// @description Constantly loops
 // You can write your code in this editor
+bulletPress = false;
 if (instance_exists(obj_player)) {
 	move_wrap(true, true, 0)
 	
@@ -36,8 +37,9 @@ if (instance_exists(obj_player)) {
 
 	if mouse_check_button_pressed(mb_left)
 	{
-	        instance_create_layer(x, y, "Instances", obj_bullet)
+		bulletPress = true;
 	}
+	
 
 	function UpdateMotion()
 	{
@@ -48,6 +50,14 @@ if (instance_exists(obj_player)) {
 		if(pDirection == 0)
 			motion_set(image_angle, 0);
 	}
+	
+	if(bulletPress == true)
+	{
+		instance_create_layer(x, y, "Instances", obj_bullet);
+		
+	}
+	
+	
 }
 
 //

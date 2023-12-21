@@ -9,33 +9,52 @@ ASTEROIDblam2,
 ASTEROIDblam3,
 ];
 
-healthPoints--;
+dentList = [
+ASTEROIDdent1,
+ASTEROIDdent2,
+ASTEROIDdent3,
+ASTEROIDdent4
+];
 
-	effect_create_above(ef_smoke, x, y, 1, c_dkgrey);
+locationListX = [
+-50,
+-100,
+room_width + 50,
+room_width + 100
+];
+
+locationListY = [
+-50,
+-100,
+room_height + 50,
+room_height + 100
+];
+
+healthPoints -=	global.bulletDamage;
 	
-if(healthPoints == 0)
+if(healthPoints <= 0)
 {
 	// dead!
-	
 	tempHitList = array_shuffle(hitList);
-
-	audio_play_sound(tempHitList[0], 1, false)
-
+	audio_play_sound(tempHitList[0], 1, false);
 	effect_create_above(ef_explosion, x, y, 1, c_white);
-
-	direction = random(360);
-
-
-	instance_create(x, y, obj_smallRock);
-
-	if instance_number(obj_rock) > 12
+	
+	for(var i = 0; i < global.rockSpawnAmount; i++)
 	{
-			instance_destroy();
-
+		instance_create_depth(x, y, 0, obj_smallRock);
 	}
-	else if instance_number(obj_rock) < 12
+
+	if instance_number(obj_rock) < 12
 	{
-			x = -100;
+		direction = random(360);
+		tempLocX = array_shuffle(locationListX);
+		tempLocY = array_shuffle(locationListY);
+	    instance_create_depth(tempLocX[0], tempLocY[0], 0, obj_rock);
+		instance_destroy();
+	}
+	else
+	{
+	     instance_destroy();
 	}
 
 	obj_game.points += 10;
@@ -43,16 +62,8 @@ if(healthPoints == 0)
 else
 {
 	// Not Dead!
-	dentList = [
-	ASTEROIDdent1,
-	ASTEROIDdent2,
-	ASTEROIDdent3,
-	ASTEROIDdent4
-	];
-	
+	effect_create_above(ef_smoke, x, y, 1, c_dkgrey);
 	tempDent = array_shuffle(dentList);
-
-	audio_play_sound(tempDent[0], 1, false)
+	audio_play_sound(tempDent[0], 1, false);
 }
-
 

@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "ASTEROIDdent1.mp3",
   "type": 0,
-  "volume": 0.2,
+  "volume": 0.05,
 }

@@ -8,7 +8,8 @@ audioTracks =
 	gamePlay1,
 	gameplay2,
 	gamePlay3,
-	gamePlay4
+	gamePlay4,
+	gamePlay5
 ]
 
 tempAudio = array_shuffle(audioTracks);

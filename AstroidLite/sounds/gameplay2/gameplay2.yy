@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "gameplay2.mp3",
   "type": 0,
-  "volume": 0.05,
+  "volume": 0.06,
 }
