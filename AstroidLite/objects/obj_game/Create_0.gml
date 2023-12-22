@@ -3,18 +3,6 @@
 current_track_index = 0;
 points = 0;
 
-audioTracks = 
-[
-	gamePlay1,
-	gameplay2,
-	gamePlay3,
-	gamePlay4,
-	gamePlay5,
-	gamePlay6,
-	gamePlay7,
-	gamePlay8,
-	gamePlay9,
-	gamePlay10
-]
+randomize();
 
-tempAudio = array_shuffle(audioTracks);
+tempAudio = array_shuffle(global.audioTracks);

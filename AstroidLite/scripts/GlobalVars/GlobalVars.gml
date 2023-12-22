@@ -5,3 +5,17 @@ global.smallRockHealth = 10;
 global.rockSpeed = 1;
 global.rockSpawnAmount = 3;
 global.bulletDamage = 10;
+
+global.audioTracks = 
+[
+	gamePlay1,
+	gameplay2,
+	gamePlay3,
+	gamePlay4,
+	gamePlay5,
+	gamePlay6,
+	gamePlay7,
+	gamePlay8,
+	gamePlay9,
+	gamePlay10
+]
