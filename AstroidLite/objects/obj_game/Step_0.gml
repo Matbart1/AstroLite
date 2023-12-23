@@ -18,6 +18,22 @@ if(!audio_is_playing(tempAudio[current_track_index]))
 	}
 }
 
+// level up mechanic goes here
+if(points >= levelPoints)
+{
+	levelPoints = (levelPoints * 1.10) + 100;
+}
+
+if keyboard_check(vk_tab)
+{
+instance_deactivate_all(true);	
+}
+	
+if keyboard_check(vk_backspace)
+{
+instance_activate_all();	
+}
+
 
 
 

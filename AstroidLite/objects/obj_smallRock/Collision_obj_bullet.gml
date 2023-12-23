@@ -9,12 +9,6 @@ effect_create_above(ef_smoke, x, y, 1, c_dkgrey);
 if(healthPoints <= 0)
 {
 	// dead!
-	hitList = 
-	[
-		ASTEROIDblam1,
-		ASTEROIDblam2,
-		ASTEROIDblam3,
-	];
 	tempHitList = array_shuffle(hitList);
 	audio_play_sound(tempHitList[0], 1, false)
 
@@ -29,13 +23,6 @@ if(healthPoints <= 0)
 else
 {
 	// Not Dead!
-	dentList = [
-	ASTEROIDdent1,
-	ASTEROIDdent2,
-	ASTEROIDdent3,
-	ASTEROIDdent4
-	];
-	
 	tempDent = array_shuffle(dentList);
 
 	audio_play_sound(tempDent[0], 1, false)

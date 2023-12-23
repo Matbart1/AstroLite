@@ -8,3 +8,16 @@ direction = random(360);
 image_angle = random(360);
 
 healthPoints = global.smallRockHealth;
+
+hitList = [
+	ASTEROIDblam1,
+	ASTEROIDblam2,
+	ASTEROIDblam3,
+];
+	
+dentList = [
+	ASTEROIDdent1,
+	ASTEROIDdent2,
+	ASTEROIDdent3,
+	ASTEROIDdent4
+];

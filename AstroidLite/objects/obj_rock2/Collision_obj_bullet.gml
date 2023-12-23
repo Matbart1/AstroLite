@@ -3,38 +3,6 @@
 
 instance_destroy(other);
 
-rockList = [
-obj_rock,
-obj_rock2
-];
-
-hitList = [
-ASTEROIDblam1,
-ASTEROIDblam2,
-ASTEROIDblam3,
-];
-
-dentList = [
-ASTEROIDdent1,
-ASTEROIDdent2,
-ASTEROIDdent3,
-ASTEROIDdent4
-];
-
-locationListX = [
--50,
--100,
-room_width + 50,
-room_width + 100
-];
-
-locationListY = [
--50,
--100,
-room_height + 50,
-room_height + 100
-];
-
 healthPoints -=	global.bulletDamage;
 	
 if(healthPoints <= 0)

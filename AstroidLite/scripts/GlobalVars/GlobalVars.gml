@@ -5,6 +5,7 @@ global.smallRockHealth = 10;
 global.rockSpeed = 1;
 global.rockSpawnAmount = 3;
 global.bulletDamage = 10;
+global.bulletTime = 500;
 
 global.audioTracks = 
 [
