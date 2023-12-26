@@ -68,6 +68,7 @@
     {"name":"objMenuExit","order":15,"path":"objects/objMenuExit/objMenuExit.yy",},
     {"name":"objHelpMenu","order":12,"path":"objects/objHelpMenu/objHelpMenu.yy",},
     {"name":"ASTEROIDblam2","order":13,"path":"sounds/ASTEROIDblam2/ASTEROIDblam2.yy",},
+    {"name":"fntBigGameText","order":2,"path":"fonts/fntBigGameText/fntBigGameText.yy",},
     {"name":"ASTEROIDdent1","order":15,"path":"sounds/ASTEROIDdent1/ASTEROIDdent1.yy",},
     {"name":"ASTEROIDdeath2","order":10,"path":"sounds/ASTEROIDdeath2/ASTEROIDdeath2.yy",},
     {"name":"spr_meteor","order":12,"path":"sprites/spr_meteor/spr_meteor.yy",},

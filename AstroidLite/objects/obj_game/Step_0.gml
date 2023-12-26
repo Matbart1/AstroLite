@@ -31,6 +31,11 @@ else
 	// level up mechanic goes here
 	if(points >= levelPoints)
 	{
+		audio_play_sound(ASTEROIDupgrade1, 1, false);
+		// open up a level up menu and have a selection of choices
+		// presented, then once the selection is made, return to 
+		// the game -> this means i need to make objects
+		// 1 for each upgrade, and should make them upgrade cards
 		levelPoints = (levelPoints * 1.10) + 100;
 	}
 

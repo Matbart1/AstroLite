@@ -11,3 +11,4 @@ ASTEROIDdeath3,
 shootBool = false;
 curSpeed = global.bulletTime
 tempDeathList = array_shuffle(deathList);
+alarm[0] = game_get_speed(gamespeed_fps) * curSpeed;

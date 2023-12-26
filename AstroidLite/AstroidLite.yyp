@@ -101,6 +101,7 @@
     {"id":{"name":"objMenuExit","path":"objects/objMenuExit/objMenuExit.yy",},},
     {"id":{"name":"objHelpMenu","path":"objects/objHelpMenu/objHelpMenu.yy",},},
     {"id":{"name":"ASTEROIDblam2","path":"sounds/ASTEROIDblam2/ASTEROIDblam2.yy",},},
+    {"id":{"name":"fntBigGameText","path":"fonts/fntBigGameText/fntBigGameText.yy",},},
     {"id":{"name":"ASTEROIDdent1","path":"sounds/ASTEROIDdent1/ASTEROIDdent1.yy",},},
     {"id":{"name":"ASTEROIDdeath2","path":"sounds/ASTEROIDdeath2/ASTEROIDdeath2.yy",},},
     {"id":{"name":"GlobalVars","path":"scripts/GlobalVars/GlobalVars.yy",},},
