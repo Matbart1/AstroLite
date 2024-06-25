@@ -1,44 +1,29 @@
 /// @description Constantly loops
 // You can write your code in this editor
 	if (instance_exists(obj_player)) {
+	curSpeed = global.bulletTime;
 	move_wrap(true, true, 0)
 	
-    // The object exists, perform actions here
-	if keyboard_check(vk_space)
+	// Acceptable, probably rework later
+	if x +3 <= mouse_x or x-3 >= mouse_x
+		if y+3 <= mouse_y or y-3 >= mouse_y
+			image_angle = point_direction(x, y, mouse_x, mouse_y);
+	
+	direction = image_angle;
+	
+	if global.applyChanges
 	{
-	        pDirection = 0;
-			UpdateMotion()
+		speed = global.playerSpeed;
+		global.applyChanges = false;
 	}
 	
-	if keyboard_check(ord("W"))
-	{
-	        pDirection = 1;
-			UpdateMotion()
-	}
-
-	if keyboard_check(ord("A"))
-	{
-	        image_angle += 4;
-			UpdateMotion()
-	 }
-
-	if keyboard_check(ord("D"))
-	{
-	        image_angle -= 4;
-			UpdateMotion()
-	}
 	
-	function UpdateMotion()
-	{
-		if(pDirection == 1)
-			motion_set(image_angle, 5);
-		if(pDirection == 0)
-			motion_set(image_angle, 0);
-	}
+	// should constantly maintain a straight forward angle
+	global.bulletAngle = image_angle;
 	
+	if keyboard_check_pressed(ord("W"))
+		speed = global.playerSpeed * 2;
+	
+	if keyboard_check_released(ord("W"))
+		speed = global.playerSpeed;
 }
-
-//
-//	Game crashes on key input when player is defeated
-//
-

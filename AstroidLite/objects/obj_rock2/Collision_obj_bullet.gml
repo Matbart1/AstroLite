@@ -8,7 +8,7 @@ healthPoints -=	global.bulletDamage;
 if(healthPoints <= 0)
 {
 	// dead!
-	tempHitList = array_shuffle(hitList);
+	var tempHitList = array_shuffle(hitList);
 	audio_play_sound(tempHitList[0], 1, false);
 	effect_create_above(ef_explosion, x, y, 1, c_white);
 	
@@ -20,9 +20,9 @@ if(healthPoints <= 0)
 	if instance_number(obj_rock) < 12
 	{
 		direction = random(360);
-		tempLocX = array_shuffle(locationListX);
-		tempLocY = array_shuffle(locationListY);
-		tempRockList = array_shuffle(rockList);
+		var tempLocX = array_shuffle(locationListX);
+		var tempLocY = array_shuffle(locationListY);
+		var tempRockList = array_shuffle(rockList);
 	    instance_create_depth(tempLocX[0], tempLocY[0], 0, tempRockList[0]);
 		instance_destroy();
 	}
@@ -31,13 +31,13 @@ if(healthPoints <= 0)
 	     instance_destroy();
 	}
 
-	obj_game.points += 10;
+	obj_game.points += global.bigRockXp;
 }
 else
 {
 	// Not Dead!
 	effect_create_above(ef_smoke, x, y, 1, c_dkgrey);
-	tempDent = array_shuffle(dentList);
+	var tempDent = array_shuffle(dentList);
 	audio_play_sound(tempDent[0], 1, false);
 }
 

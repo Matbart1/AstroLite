@@ -1,7 +1,7 @@
 /// @description Occurs on inception
 // You can write your code in this editor
 speed = 10;
-direction = obj_player.image_angle;
+direction = global.bulletAngle;
 
 bulletList = [
 ASTEROIDpew1,

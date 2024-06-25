@@ -3,7 +3,6 @@
 speed = global.rockSpeed;
 direction = random(360);
 image_angle = random(360);
-
 healthPoints = global.bigRockHealth;
 
 

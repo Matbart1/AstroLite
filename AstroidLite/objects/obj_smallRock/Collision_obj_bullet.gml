@@ -9,7 +9,7 @@ effect_create_above(ef_smoke, x, y, 1, c_dkgrey);
 if(healthPoints <= 0)
 {
 	// dead!
-	tempHitList = array_shuffle(hitList);
+	var tempHitList = array_shuffle(hitList);
 	audio_play_sound(tempHitList[0], 1, false)
 
 	effect_create_above(ef_explosion, x, y, 1, c_white);
@@ -18,12 +18,12 @@ if(healthPoints <= 0)
 
 	instance_destroy();
 
-	obj_game.points += 2;
+	obj_game.points += global.smallRockXp;
 }
 else
 {
 	// Not Dead!
-	tempDent = array_shuffle(dentList);
+	var tempDent = array_shuffle(dentList);
 
 	audio_play_sound(tempDent[0], 1, false)
 }

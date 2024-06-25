@@ -36,10 +36,13 @@ else
 		// presented, then once the selection is made, return to 
 		// the game -> this means i need to make objects
 		// 1 for each upgrade, and should make them upgrade cards
-		levelPoints = (levelPoints * 1.10) + 100;
+		room_persistent = true;
+		global.img = sprite_create_from_surface(application_surface, 0, 0, 2048, 1440, false, true, 0, 0) 
+		room_goto(UpgradeScreen);
+		levelPoints = (levelPoints * 1.10) + 300;
 	}
 
-	if keyboard_check_pressed(vk_escape)
+	if keyboard_check_released(vk_escape)
 	{
 		room_persistent = true;
 		global.img = sprite_create_from_surface(application_surface, 0, 0, 2048, 1440, false, true, 0, 0) 
