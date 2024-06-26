@@ -13,21 +13,21 @@ switch global.bulletAmount
 	break;
 	
 	case 2:
-	global.bulletAngle -= 10
+	global.bulletAngle -= 5
+	instance_create_layer(x, y, "Instances", obj_bullet);
+	global.bulletAngle += 10
+	instance_create_layer(x, y, "Instances", obj_bullet);
+	global.bulletAngle -= 5;
+	break;
+	
+	case 3:
+	global.bulletAngle -= 20
+	instance_create_layer(x, y, "Instances", obj_bullet);
+	global.bulletAngle += 20
 	instance_create_layer(x, y, "Instances", obj_bullet);
 	global.bulletAngle += 20
 	instance_create_layer(x, y, "Instances", obj_bullet);
 	global.bulletAngle -= 20;
-	break;
-	
-	case 3:
-	global.bulletAngle -= 30
-	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 30
-	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 30
-	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle -= 30;
 	break;
 	
 	case 4:
@@ -58,20 +58,19 @@ switch global.bulletAmount
 	break;
 	
 	case 6:
-	// -45* -30* -15* 15* 30* 45* 
-	global.bulletAngle -= 45
+	global.bulletAngle -= 30
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 15
+	global.bulletAngle += 12
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 20
+	global.bulletAngle += 12
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 20
+	global.bulletAngle += 12
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 20
+	global.bulletAngle += 12
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 15
+	global.bulletAngle += 12
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle -= 45;
+	global.bulletAngle -= 30;
 	break;
 	
 	case 7:
@@ -97,21 +96,21 @@ switch global.bulletAmount
 	// -45* -33.75* -22.5* -11.25* 11.25* 22.5* 33.75* 45*
 	global.bulletAngle -= 45
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 11.25
+	global.bulletAngle += 12.8
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 11.25
+	global.bulletAngle += 12.8
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 11.25
+	global.bulletAngle += 12.8
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 22.50
+	global.bulletAngle += 12.8
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 11.25
+	global.bulletAngle += 12.8
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 11.25
+	global.bulletAngle += 12.8
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle += 11.25
+	global.bulletAngle += 12.8
 	instance_create_layer(x, y, "Instances", obj_bullet);
-	global.bulletAngle -= 45;
+	global.bulletAngle = 0;
 	break;
 	
 	case 9:
@@ -138,9 +137,12 @@ switch global.bulletAmount
 	break;
 	
 	case 10:
-	// return to 1 projectile, 2x size, 2x damage
-	global.bulletAmount = 1;
-	global.bulletDamage *= 2;
+	for (var i = 0; i < 360; i += 10)
+	{
+		instance_create_layer(x, y, "Instances", obj_bullet);
+		global.bulletAngle += 10;
+	}
+	
 	
 	break;
 }

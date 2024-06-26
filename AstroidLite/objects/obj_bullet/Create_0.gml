@@ -1,8 +1,9 @@
 /// @description Occurs on inception
 // You can write your code in this editor
-speed = 10;
+speed = global.bulletSpeed;
 direction = global.bulletAngle;
-
+image_xscale = global.bulletSize;
+image_yscale = global.bulletSize;
 bulletList = [
 ASTEROIDpew1,
 ASTEROIDpew2,
