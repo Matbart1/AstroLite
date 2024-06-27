@@ -40,6 +40,7 @@ else
 			// 1 for each upgrade, and should make them upgrade cards
 			room_persistent = true;
 			global.img = sprite_create_from_surface(application_surface, 0, 0, 2048, 1440, false, true, 0, 0) 
+			global.playerReroll = 1;
 			room_goto(UpgradeScreen);
 			levelPoints = (levelPoints * 1.10) + 300;
 		}

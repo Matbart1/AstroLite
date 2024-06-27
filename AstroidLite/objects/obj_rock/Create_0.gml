@@ -1,8 +1,12 @@
 /// @description On Creation
 // You can write your code in this editor
 speed = global.rockSpeed * 2;
-direction = obj_player.image_angle;
 image_angle = random(360);
+
+if instance_exists(obj_player)
+	direction = obj_player.image_angle;
+else
+	direction = image_angle
 
 healthPoints = global.bigRockHealth;
 

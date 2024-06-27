@@ -7,7 +7,7 @@ function varReset()
 	global.smallRockHealth = 100;
 	global.rockSpeed = 1;
 	global.rockSpawnAmount = 3;
-	global.bigRockXp = 100;
+	global.bigRockXp = 500;
 	global.smallRockXp = 25;
 
 	// BULLETS
@@ -22,6 +22,7 @@ function varReset()
 	global.playerSpeed = 3;
 	global.persistenceReset = false;
 	global.applyChanges = true;
+	global.playerReroll = 1;
 }
 
 varReset();

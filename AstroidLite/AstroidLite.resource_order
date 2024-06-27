@@ -17,6 +17,7 @@
   "ResourceOrderSettings":[
     {"name":"fntBigGameText","order":2,"path":"fonts/fntBigGameText/fntBigGameText.yy",},
     {"name":"fntMenu","order":1,"path":"fonts/fntMenu/fntMenu.yy",},
+    {"name":"fntUpgradeText","order":3,"path":"fonts/fntUpgradeText/fntUpgradeText.yy",},
     {"name":"obj_bullet","order":1,"path":"objects/obj_bullet/obj_bullet.yy",},
     {"name":"obj_ButtonParent","order":4,"path":"objects/obj_ButtonParent/obj_ButtonParent.yy",},
     {"name":"obj_game","order":3,"path":"objects/obj_game/obj_game.yy",},
@@ -35,6 +36,7 @@
     {"name":"objMenuExit","order":15,"path":"objects/objMenuExit/objMenuExit.yy",},
     {"name":"objMenuResume","order":16,"path":"objects/objMenuResume/objMenuResume.yy",},
     {"name":"objPlay","order":5,"path":"objects/objPlay/objPlay.yy",},
+    {"name":"objUpgradeReroll","order":19,"path":"objects/objUpgradeReroll/objUpgradeReroll.yy",},
     {"name":"HelpMenu","order":2,"path":"rooms/HelpMenu/HelpMenu.yy",},
     {"name":"MainMenu","order":1,"path":"rooms/MainMenu/MainMenu.yy",},
     {"name":"PauseScreen","order":3,"path":"rooms/PauseScreen/PauseScreen.yy",},
@@ -74,6 +76,7 @@
     {"name":"LevelRare","order":14,"path":"sprites/LevelRare/LevelRare.yy",},
     {"name":"MenuBackground","order":8,"path":"sprites/MenuBackground/MenuBackground.yy",},
     {"name":"Play","order":6,"path":"sprites/Play/Play.yy",},
+    {"name":"ReRoll","order":17,"path":"sprites/ReRoll/ReRoll.yy",},
     {"name":"Resume","order":13,"path":"sprites/Resume/Resume.yy",},
     {"name":"spr_meteor","order":12,"path":"sprites/spr_meteor/spr_meteor.yy",},
     {"name":"spr_player","order":1,"path":"sprites/spr_player/spr_player.yy",},

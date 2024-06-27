@@ -40,6 +40,7 @@ function upgradeFncLegendary()
 function upgradeFncRare()
 {
 	selection = irandom(7);	
+	
 	switch(selection)
 	{
 		case 0:
@@ -106,7 +107,7 @@ function upgradeFncCommon()
 	
 	ranVal = irandom(100);
 	
-	if ranVal > 98
+	if ranVal >= 98
 	{
 		rarity = 3;
 		sprite_index = LevelLegendary;
@@ -123,8 +124,9 @@ function upgradeFncCommon()
 		rarity = 1;	
 		sprite_index = LevelCommon;
 		upgradeFncCommon();
-
 	}
+	else
+		game_end(5);
 	
 	/*
 	UPGRADE IDEAS LOL
