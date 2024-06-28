@@ -10,3 +10,5 @@ tempDeathList = array_shuffle(deathList);
 audio_play_sound(tempDeathList[0], 1, false)
 
 varReset();
+
+

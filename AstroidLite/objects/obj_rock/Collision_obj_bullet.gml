@@ -9,7 +9,7 @@ if(healthPoints <= 0)
 {
 	// dead!
 	var tempHitList = array_shuffle(hitList);
-	audio_play_sound(tempHitList[0], 1, false);
+	audio_play_sound(pitchAudio(tempHitList[0]), 1, false);
 	effect_create_above(ef_explosion, x, y, 1, c_white);
 	
 	for(var i = 0; i < global.rockSpawnAmount; i++)
@@ -55,6 +55,6 @@ else
 	// Not Dead!
 	effect_create_above(ef_smoke, x, y, 15, c_dkgrey);
 	var tempDent = array_shuffle(dentList);
-	audio_play_sound(tempDent[0], 1, false);
+	audio_play_sound(pitchAudio(tempDent[0]), 1, false);
 }
 

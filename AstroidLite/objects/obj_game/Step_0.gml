@@ -36,6 +36,23 @@ else
 		if instance_exists(obj_player)
 		{
 			global.playerLevels += 1;
+			global.playerProgression += 1;
+			
+			switch global.playerProgression
+			{
+				case 15:
+				obj_player.sprite_index = spr_player_15;
+				break;
+				
+				case 30:
+				obj_player.sprite_index = spr_player_30;
+				break;
+				
+				case 45:
+				obj_player.sprite_index = spr_player_45;
+				break;
+			}
+			
 			audio_play_sound(ASTEROIDupgrade1, 1, false);
 			
 			room_persistent = true;
@@ -52,7 +69,7 @@ else
 			
 			// Every 15 levels, reduce the overall xp required by 1% (starts at 10%)
 			// at level 150, the amount of xp to level up will always be the same
-			if global.playerLevels >= 15
+			if global.playerLevels > 15
 			{
 				global.playerLevels = 0;
 				global.playerLevelScaling -= 0.01;
@@ -85,6 +102,8 @@ if second >= 60
 	second -= 60;
 	if singleUpgradeLimit == 1 // minute reached, lets make the game much more difficult
 	{
+		warningText = "The Galaxy Enrages...";
+		global.warningOpacity = 1;
 		singleUpgradeLimit = 0;
 		// buff everything
 		global.maxRockLimit += 1;
@@ -93,6 +112,14 @@ if second >= 60
 		global.rockSpeed += 0.3; 
 		global.bigRockHealth += 25;
 		global.smallRockHealth += 15;
+		global.smallRockXp = (75 / global.rockSpawnAmount);
+	}
+	
+	var randomRoll = irandom(100);
+	
+	if randomRoll >= 75
+	{
+		headHunterSpawn();
 	}
 }
 
@@ -106,6 +133,8 @@ if second == 30 && singleUpgradeLimit == 1 // half a minute reached, lets make t
 {
 	singleUpgradeLimit = 0;
 	var randomDifficultyIncrease = irandom(3);
+	warningText = "The Galaxy Grows Stronger...";
+	global.warningOpacity = 1;
 	switch randomDifficultyIncrease
 	{
 		// KEEP INTO ACCOUNT THE FRACTIONAL DIFFERENCES FROM BUFFS *?
@@ -129,7 +158,14 @@ if second == 30 && singleUpgradeLimit == 1 // half a minute reached, lets make t
 		case 4: //small rock health
 	    global.smallRockHealth += 15;
 		break;
-	}		
+	}	
+	
+	var randomRoll = irandom(100);
+	
+	if randomRoll >= 75
+	{
+		headHunterSpawn();
+	}
 }
 
 if second == 31
@@ -139,3 +175,25 @@ if second == 0
 	singleUpgradeLimit = 1;
 
 #endregion
+
+function headHunterSpawn()
+{
+	var currentSpawn = irandom(1)
+		var tempLocX = array_shuffle(locationListX);
+		var tempLocY = array_shuffle(locationListY);
+		// This will place newly spawned rocks all around the edges of the game
+		// screen, hidden away from view on the inital spawn
+		if currentSpawn == 0
+		{
+			var randomY = irandom(room_height*0.50)
+			instance_create_depth(tempLocX[0], randomY, 0, obj_headHunter);
+		}
+		
+		else if currentSpawn == 1
+		{
+			var randomX = irandom(room_width*0.50)
+			instance_create_depth(randomX, tempLocY[0], 0, obj_headHunter);
+		}
+		obj_headHunter.image_xscale = 1.5;
+		obj_headHunter.image_yscale = 1.5;
+}

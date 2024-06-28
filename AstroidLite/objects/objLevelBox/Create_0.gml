@@ -3,7 +3,7 @@ selection = 0;
 // FIX THE RANDOM SHIT
 function upgradeFncLegendary()
 {
-	selection = irandom(7);	
+	selection = irandom(8);	
 	
 	switch(selection)
 	{
@@ -34,12 +34,18 @@ function upgradeFncLegendary()
 			else
 				upgradeFnc();
 			break;
+		case 8:
+			if global.tailGunAmount < 10
+				text = "Tailgun (+2)";	
+			else
+				upgradeFnc();
+			break;
 	}
 }
 
 function upgradeFncRare()
 {
-	selection = irandom(7);	
+	selection = irandom(8);	
 	
 	switch(selection)
 	{
@@ -67,6 +73,12 @@ function upgradeFncRare()
 		case 7:
 			if global.bulletAmount < 10
 				text = "Multishot (+1)";	
+			else
+				upgradeFnc();
+			break;
+		case 8:
+			if global.tailGunAmount < 10
+				text = "Tailgun (+1)";	
 			else
 				upgradeFnc();
 			break;

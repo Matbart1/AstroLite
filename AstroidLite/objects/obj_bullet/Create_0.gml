@@ -13,5 +13,5 @@ ASTEROIDpew5
 
 
 tempBulletList = array_shuffle(bulletList);
-audio_play_sound(tempBulletList[0], 1, false)
+audio_play_sound(pitchAudio(tempBulletList[0]), 1, false);
 

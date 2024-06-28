@@ -17,6 +17,7 @@ function varReset()
 	global.bulletTime = 0.5;
 	global.bulletSpeed = 10;
 	global.bulletAmount = 1;
+	global.tailGunAmount = 0;
 	global.bulletAngle = 0;
 	global.bulletSize = 2;
 
@@ -26,11 +27,19 @@ function varReset()
 	global.applyChanges = true;
 	global.playerReroll = 1;
 	global.playerLevels = 0;
+	global.playerProgression = 0;
 	global.playerLevelScaling = 1.10;
+	global.warningOpacity = 0;
 }
 
 varReset();
 
+function pitchAudio(audioToPitch)
+{
+	var pitch = random_range(0.9, 1.3);
+	audio_sound_pitch(audioToPitch, pitch);
+	return audioToPitch;
+}
 global.audioTracks = 
 [
 	gamePlay1,
@@ -44,3 +53,10 @@ global.audioTracks =
 	gamePlay9,
 	gamePlay10
 ]
+
+// New sprite progression for levels
+// New character with permanent out of game bonuses
+// Headhunter enemy % 3 minutes
+
+// display level
+// display total score

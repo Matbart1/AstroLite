@@ -37,9 +37,9 @@ function common()
 			global.bulletSpeed += 1;
 			break;
 		case 6:
-			//"Enemy Speed (-5%)";
-			global.rockSpeed -= 0.05;
-			global.smallRockSpeed -= 0.05;
+			//"Enemy Speed (-10%)";
+			global.rockSpeed -= 0.10;
+			global.smallRockSpeed -= 0.10;
 			break;
 	}
 }
@@ -75,14 +75,20 @@ function rare()
 			global.bulletSpeed += 1;
 			break;
 		case 6:
-			//"Enemy Speed (-10%)";
-			global.rockSpeed -= 0.1;
-			global.smallRockSpeed -= 0.1;
+			//"Enemy Speed (-20%)";
+			global.rockSpeed -= 0.2;
+			global.smallRockSpeed -= 0.2;
 			break;
 		case 7:
 			//"Multishot (+1)";
 			if global.bulletAmount < 10
 				global.bulletAmount += 1;
+				global.bulletDamage *= 0.90;
+			break;
+		case 8:
+			//"Tailgun (+1)";
+			if global.tailGunAmount < 10
+				global.tailGunAmount += 1;
 				global.bulletDamage *= 0.90;
 			break;
 	}
@@ -120,16 +126,21 @@ function legendary()
 			global.bulletSpeed += 1.5;
 			break;
 		case 6:
-			//"Enemy Speed (-15%)";
-			global.rockSpeed -= 0.15;
-			global.smallRockSpeed -= 0.15;
-			
+			//"Enemy Speed (-30%)";
+			global.rockSpeed -= 0.30;
+			global.smallRockSpeed -= 0.30;
 			break;
 		case 7:
 			//"Multishot (+2)";
 			if global.bulletAmount < 10
 				global.bulletAmount += 2;
 				global.bulletDamage *= 0.81;
+			break;
+		case 8:
+			//"Tailgun (+2)";
+			if global.tailGunAmount < 10
+				global.tailGunAmount += 2;
+				global.bulletDamage *= 0.90;
 			break;
 	}
 }
