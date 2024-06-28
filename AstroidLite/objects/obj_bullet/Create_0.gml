@@ -1,5 +1,4 @@
-/// @description Occurs on inception
-// You can write your code in this editor
+/// @description 
 speed = global.bulletSpeed;
 direction = global.bulletAngle;
 image_xscale = global.bulletSize;

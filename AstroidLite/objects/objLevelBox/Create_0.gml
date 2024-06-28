@@ -8,25 +8,25 @@ function upgradeFncLegendary()
 	switch(selection)
 	{
 		case 0:
-			text = "Damage (+100%)";
+			text = "Damage (+50%)";
 			break;
 		case 1:
-			text = "Attack Speed (+40%)";	
+			text = "Attack Speed (+10%)";	
 			break;
 		case 2:
-			text = "Speed (+40%)";
+			text = "Speed (+15%)";
 			break;
 		case 3:
-			text = "Experience (+40%)";
+			text = "Experience (+30%)";
 			break;
 		case 4:
-			text = "Bullet Size (+40%)";
+			text = "Bullet Size (+30%)";
 			break;
 		case 5:
-			text = "Bullet Speed (+40%)";
+			text = "Bullet Speed (+15%)";
 			break;
 		case 6:
-			text = "Enemy Speeds (-30%)";
+			text = "Enemy Speeds (-15%)";
 			break;
 		case 7:
 			if global.bulletAmount < 10
@@ -44,13 +44,13 @@ function upgradeFncRare()
 	switch(selection)
 	{
 		case 0:
-			text = "Damage (+50%)";
+			text = "Damage (+25%)";
 			break;
 		case 1:
-			text = "Attack Speed (+20%)";	
+			text = "Attack Speed (+5%)";	
 			break;
 		case 2:
-			text = "Speed (+20%)";
+			text = "Speed (+10%)";
 			break;
 		case 3:
 			text = "Experience (+20%)";
@@ -59,10 +59,10 @@ function upgradeFncRare()
 			text = "Bullet Size (+20%)";
 			break;
 		case 5:
-			text = "Bullet Speed (+20%)";
+			text = "Bullet Speed (+10%)";
 			break;
 		case 6:
-			text = "Enemy Speeds (-20%)";
+			text = "Enemy Speeds (-10%)";
 			break;
 		case 7:
 			if global.bulletAmount < 10
@@ -80,13 +80,13 @@ function upgradeFncCommon()
 	switch(selection)
 	{
 		case 0:
-			text = "Damage (+25%)";
+			text = "Damage (+10%)";
 			break;
 		case 1:
-			text = "Attack Speed (+10%)";	
+			text = "Attack Speed (+2.5%)";	
 			break;
 		case 2:
-			text = "Speed (+10%)";
+			text = "Speed (+5%)";
 			break;
 		case 3:
 			text = "Experience (+10%)";
@@ -95,10 +95,10 @@ function upgradeFncCommon()
 			text = "Bullet Size (+10%)";
 			break;
 		case 5:
-			text = "Bullet Speed (+10%)";
+			text = "Bullet Speed (+5%)";
 			break;
 		case 6:
-			text = "Enemy Speeds (-10%)";
+			text = "Enemy Speeds (-5%)";
 			break;
 	}
 }

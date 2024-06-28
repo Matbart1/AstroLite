@@ -4,4 +4,4 @@
 event_inherited();
 audio_stop_all();
 global.persistenceReset = true;
-room_goto(UpgradeScreen);
+room_goto(MainMenu);

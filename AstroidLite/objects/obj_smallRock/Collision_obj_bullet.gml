@@ -18,7 +18,7 @@ if(healthPoints <= 0)
 
 	instance_destroy();
 
-	obj_game.points += global.smallRockXp;
+	obj_game.currentPoints += global.smallRockXp;
 }
 else
 {

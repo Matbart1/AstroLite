@@ -29,15 +29,11 @@ ASTEROIDdent4
 ];
 
 locationListX = [
--50,
 -100,
-room_width + 50,
 room_width + 100
 ];
 
 locationListY = [
--50,
 -100,
-room_height + 50,
 room_height + 100
 ];
