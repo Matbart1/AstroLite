@@ -12,8 +12,8 @@
   "duration":0.940408,
   "name":"ASTEROIDdent3",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Asteroid",
+    "path":"folders/Sounds/Asteroid.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

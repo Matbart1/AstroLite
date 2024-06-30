@@ -16,9 +16,9 @@ draw_text_transformed(room_width * 0.25, 13,
 string_format(pointsForLevel - currentPoints, 0, 0),
 0.5, 0.5, 0);
 
-draw_text_transformed(room_width * 0.40, 13, $"Current Level: {global.currentLevel}", 0.5, 0.5, 0);
-
+draw_text_transformed(room_width * 0.40, 12, $"Current Level:", 0.5, 0.5, 0);
 draw_set_color(#03ff89)
+draw_text_transformed(room_width * 0.445, 13, global.currentLevel, 0.5, 0.5, 0);
 
 var stopWatch = string_replace_all(
 string_format(hour, 2, 0) + ":" + 

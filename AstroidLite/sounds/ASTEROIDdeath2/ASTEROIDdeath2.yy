@@ -12,8 +12,8 @@
   "duration":0.757551,
   "name":"ASTEROIDdeath2",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Player",
+    "path":"folders/Sounds/Player.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

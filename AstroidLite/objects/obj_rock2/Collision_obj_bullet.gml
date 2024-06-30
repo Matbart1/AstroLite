@@ -40,12 +40,15 @@ if(healthPoints <= 0)
 			instance_create_depth(randomX, tempLocY[0], 0, tempRockList[0]);
 		}
 	
-		
+		var xpPop = instance_create_depth(x, y, 0, objScore)
+		xpPop.value = global.bigRockXp;
 		instance_destroy();
 	}
 	else
 	{
-	     instance_destroy();
+		var xpPop = instance_create_depth(x, y, 0, objScore)
+		xpPop.value = global.bigRockXp;
+	    instance_destroy();
 	}
 
 	obj_game.currentPoints += global.bigRockXp;

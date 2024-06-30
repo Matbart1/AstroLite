@@ -15,7 +15,9 @@ if(healthPoints <= 0)
 	effect_create_above(ef_explosion, x, y, 1, c_white);
 
 	direction = random(360);
-
+	
+	var xpPop = instance_create_depth(x, y, 0, objScore)
+	xpPop.value = global.smallRockXp;
 	instance_destroy();
 
 	obj_game.currentPoints += global.smallRockXp;

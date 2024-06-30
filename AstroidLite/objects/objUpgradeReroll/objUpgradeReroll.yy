@@ -10,8 +10,8 @@
   "name":"objUpgradeReroll",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"IGNORE",
+    "path":"folders/Objects/IGNORE.yy",
   },
   "parentObjectId":{
     "name":"obj_ButtonParent",

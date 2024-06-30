@@ -3,8 +3,7 @@
 
 
 alarm[0] = game_get_speed(gamespeed_fps) * curSpeed;
-// somehow gotta figure out how to manipulate bullet angle 
-// from here
+
 switch global.bulletAmount
 {
 	case 1:
@@ -155,7 +154,7 @@ switch global.bulletAmount
 }
 
 global.bulletAngle -= 180;
-/*
+
 switch global.tailGunAmount
 {
 	case 1:
@@ -262,7 +261,7 @@ switch global.tailGunAmount
 		global.bulletAngle += 12.8
 		instance_create_layer(x, y, "Instances", obj_bullet);
 		global.bulletAngle = 0;
-	break;
+		break;
 	
 	case 9:
 		// -45* -33.75* -22.5* -11.25* 0* 11.25* 22.5* 33.75* 45*
@@ -303,5 +302,3 @@ switch global.tailGunAmount
 		}
 		break;	
 }
-}
-*/

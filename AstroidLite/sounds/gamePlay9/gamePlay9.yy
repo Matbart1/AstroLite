@@ -12,8 +12,8 @@
   "duration":157.57062,
   "name":"gamePlay9",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

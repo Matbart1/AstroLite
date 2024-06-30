@@ -12,8 +12,8 @@
   "duration":1.044898,
   "name":"ASTEROIDpew5",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Player",
+    "path":"folders/Sounds/Player.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

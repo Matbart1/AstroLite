@@ -12,8 +12,8 @@
   "duration":0.574694,
   "name":"ASTEROIDpew3",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Player",
+    "path":"folders/Sounds/Player.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -11,8 +11,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ButtonParent","path":"objects/obj_ButtonParent/obj_ButtonParent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_ButtonParent/obj_ButtonParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Play",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"IGNORE",
+    "path":"folders/Objects/IGNORE.yy",
   },
   "parentObjectId":{
     "name":"obj_ButtonParent",

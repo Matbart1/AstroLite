@@ -12,8 +12,8 @@
   "duration":184.53215,
   "name":"gameplay2",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

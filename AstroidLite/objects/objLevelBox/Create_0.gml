@@ -8,35 +8,35 @@ function upgradeFncLegendary()
 	switch(selection)
 	{
 		case 0:
-			text = "Damage (+50%)";
+			text = "+ Damage";
 			break;
 		case 1:
-			text = "Attack Speed (+10%)";	
+			text = "+ Attack Speed";	
 			break;
 		case 2:
-			text = "Speed (+15%)";
+			text = "+ Speed";
 			break;
 		case 3:
-			text = "Experience (+30%)";
+			text = "+ Experience";
 			break;
 		case 4:
-			text = "Bullet Size (+30%)";
+			text = "+ Bullet Size";
 			break;
 		case 5:
-			text = "Bullet Speed (+15%)";
+			text = "+ Bullet Speed";
 			break;
 		case 6:
-			text = "Enemy Speeds (-15%)";
+			text = "- Enemy Speeds";
 			break;
 		case 7:
 			if global.bulletAmount < 10
-				text = "Multishot (+2)";	
+				text = "+ Multishot";	
 			else
 				upgradeFncLegendary();
 			break;
 		case 8:
 			if global.tailGunAmount < 10
-				text = "Tailgun (+2)";	
+				text = "+ Tailgun";	
 			else
 				upgradeFncLegendary();
 			break;
@@ -50,35 +50,35 @@ function upgradeFncRare()
 	switch(selection)
 	{
 		case 0:
-			text = "Damage (+25%)";
+			text = "+ Damage";
 			break;
 		case 1:
-			text = "Attack Speed (+5%)";	
+			text = "+ Attack Speed";	
 			break;
 		case 2:
-			text = "Speed (+10%)";
+			text = "+ Speed";
 			break;
 		case 3:
-			text = "Experience (+20%)";
+			text = "+ Experience";
 			break;
 		case 4:
-			text = "Bullet Size (+20%)";
+			text = "+ Bullet Size";
 			break;
 		case 5:
-			text = "Bullet Speed (+10%)";
+			text = "+ Bullet Speed";
 			break;
 		case 6:
-			text = "Enemy Speeds (-10%)";
+			text = "- Enemy Speeds";
 			break;
 		case 7:
 			if global.bulletAmount < 10
-				text = "Multishot (+1)";	
+				text = "+ Multishot";	
 			else
 				upgradeFncRare();
 			break;
 		case 8:
 			if global.tailGunAmount < 10
-				text = "Tailgun (+1)";	
+				text = "+ Tailgun";	
 			else
 				upgradeFncRare();
 			break;
@@ -92,25 +92,25 @@ function upgradeFncCommon()
 	switch(selection)
 	{
 		case 0:
-			text = "Damage (+10%)";
+			text = "+ Damage";
 			break;
 		case 1:
-			text = "Attack Speed (+2.5%)";	
+			text = "+ Attack Speed";	
 			break;
 		case 2:
-			text = "Speed (+5%)";
+			text = "+ Speed";
 			break;
 		case 3:
-			text = "Experience (+10%)";
+			text = "+ Experience";
 			break;
 		case 4:
-			text = "Bullet Size (+10%)";
+			text = "+ Bullet Size";
 			break;
 		case 5:
-			text = "Bullet Speed (+5%)";
+			text = "+ Bullet Speed";
 			break;
 		case 6:
-			text = "Enemy Speeds (-5%)";
+			text = "- Enemy Speeds";
 			break;
 	}
 }

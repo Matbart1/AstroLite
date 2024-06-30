@@ -20,6 +20,8 @@ function varReset()
 	global.tailGunAmount = 0;
 	global.bulletAngle = 0;
 	global.bulletSize = 2;
+	global.bulletRicochet = 0;
+	global.bulletPenetrate = 0;
 
 	// PLaYER  /  FLaGS
 	global.playerSpeed = 3;
