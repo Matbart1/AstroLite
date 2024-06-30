@@ -7,7 +7,7 @@ function varReset()
 	global.smallRockHealth = 100;
 	global.rockSpeed = 1;
 	global.smallRockSpeed = 1.5;
-	global.rockSpawnAmount = 3;
+	global.rockSpawnamount = 3;
 	global.bigRockXp = 100;
 	global.smallRockXp = 25;
 	global.maxRockLimit = 12;
@@ -21,20 +21,20 @@ function varReset()
 	global.bulletAngle = 0;
 	global.bulletSize = 2;
 
-	// PLAYER  /  FLAGS
+	// PLaYER  /  FLaGS
 	global.playerSpeed = 3;
 	global.persistenceReset = false;
 	global.applyChanges = true;
 	global.playerReroll = 1;
-	global.playerLevels = 0;
-	global.playerProgression = 0;
-	global.playerLevelScaling = 1.10;
+	global.Progression = 0;
+	global.currentLevel = 0;
+	global.acaling = 1.10;
 	global.warningOpacity = 0;
 }
 
 varReset();
 
-function pitchAudio(audioToPitch)
+function pitchaudio(audioToPitch)
 {
 	var pitch = random_range(0.9, 1.3);
 	audio_sound_pitch(audioToPitch, pitch);

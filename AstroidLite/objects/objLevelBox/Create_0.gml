@@ -1,6 +1,6 @@
 rarity = 0;
 selection = 0;
-// FIX THE RANDOM SHIT
+// FIX THE RaNDOM SHIT
 function upgradeFncLegendary()
 {
 	selection = irandom(8);	
@@ -32,13 +32,13 @@ function upgradeFncLegendary()
 			if global.bulletAmount < 10
 				text = "Multishot (+2)";	
 			else
-				upgradeFnc();
+				upgradeFncLegendary();
 			break;
 		case 8:
 			if global.tailGunAmount < 10
 				text = "Tailgun (+2)";	
 			else
-				upgradeFnc();
+				upgradeFncLegendary();
 			break;
 	}
 }
@@ -74,13 +74,13 @@ function upgradeFncRare()
 			if global.bulletAmount < 10
 				text = "Multishot (+1)";	
 			else
-				upgradeFnc();
+				upgradeFncRare();
 			break;
 		case 8:
 			if global.tailGunAmount < 10
 				text = "Tailgun (+1)";	
 			else
-				upgradeFnc();
+				upgradeFncRare();
 			break;
 	}
 }
@@ -141,7 +141,7 @@ function upgradeFncCommon()
 		game_end(5);
 	
 	/*
-	UPGRADE IDEAS LOL
+	UPGRaDE IDEaS LOL
 	legendary- program new gun, rocket? maybe shrapnel? laser?
 	legendary- saving grace - bubble shield lol (1 use)
 	*/

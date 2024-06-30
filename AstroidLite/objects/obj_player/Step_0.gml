@@ -4,7 +4,7 @@
 	curSpeed = global.bulletTime;
 	move_wrap(true, true, 0)
 	
-	// Acceptable, probably rework later
+	// acceptable, probably rework later
 	if x +3 <= mouse_x or x-3 >= mouse_x
 		if y+3 <= mouse_y or y-3 >= mouse_y
 			image_angle = point_direction(x, y, mouse_x, mouse_y);
@@ -20,10 +20,10 @@
 	
 	// should constantly maintain a straight forward angle
 	global.bulletAngle = image_angle;
-	
-	if keyboard_check_pressed(ord("W"))
-		speed = global.playerSpeed * 2;
-	
-	if keyboard_check_released(ord("W"))
-		speed = global.playerSpeed;
+
+	if mouse_check_button_pressed(mb_left)
+		speed = global.playerSpeed * 2;	
+		
+	if mouse_check_button_released(mb_left)
+		speed = global.playerSpeed;	
 }

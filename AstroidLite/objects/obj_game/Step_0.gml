@@ -12,13 +12,13 @@ if(global.persistenceReset == true)
 }
 else
 {
-	if(!audio_is_playing(tempAudio[current_track_index]))
+	if(!audio_is_playing(tempaudio[current_track_index]))
 	{
-		if (current_track_index < array_length(tempAudio) - 1) {
+		if (current_track_index < array_length(tempaudio) - 1) {
 		    // If there are more tracks in the playlist, move to the next track
 		    current_track_index += 1;
 			audio_stop_all();
-		    audio_play_sound(tempAudio[current_track_index], 1, false);
+		    audio_play_sound(tempaudio[current_track_index], 1, false);
 		}
 		else
 		{
@@ -26,7 +26,7 @@ else
 		    // For example, to loop back to the first track:
 		    current_track_index = 0;
 			audio_stop_all();
-		    audio_play_sound(tempAudio[current_track_index], 1, false);
+		    audio_play_sound(tempaudio[current_track_index], 1, false);
 		}
 	}
 
@@ -35,10 +35,10 @@ else
 	{
 		if instance_exists(obj_player)
 		{
-			global.playerLevels += 1;
-			global.playerProgression += 1;
+			global.Progression += 1;
+			global.currentLevel += 1;
 			
-			switch global.playerProgression
+			switch global.currentLevel
 			{
 				case 15:
 				obj_player.sprite_index = spr_player_15;
@@ -65,14 +65,14 @@ else
 			
 			// Increase experience required for next level
 			currentPoints = 0;
-			pointsForLevel = (pointsForLevel * global.playerLevelScaling);
+			pointsForLevel = (pointsForLevel * global.acaling);
 			
 			// Every 15 levels, reduce the overall xp required by 1% (starts at 10%)
 			// at level 150, the amount of xp to level up will always be the same
-			if global.playerLevels > 15
+			if global.Progression > 15
 			{
-				global.playerLevels = 0;
-				global.playerLevelScaling -= 0.01;
+				global.Progression = 0;
+				global.acaling -= 0.01;
 			}
 		}
 	}
@@ -107,12 +107,12 @@ if second >= 60
 		singleUpgradeLimit = 0;
 		// buff everything
 		global.maxRockLimit += 1;
-		global.rockSpawnAmount += 1;
+		global.rockSpawnamount += 1;
 		global.smallRockSpeed += 0.3;
 		global.rockSpeed += 0.3; 
 		global.bigRockHealth += 25;
 		global.smallRockHealth += 15;
-		global.smallRockXp = (75 / global.rockSpawnAmount);
+		global.smallRockXp = (75 / global.rockSpawnamount);
 	}
 	
 	var randomRoll = irandom(100);
@@ -137,7 +137,7 @@ if second == 30 && singleUpgradeLimit == 1 // half a minute reached, lets make t
 	global.warningOpacity = 1;
 	switch randomDifficultyIncrease
 	{
-		// KEEP INTO ACCOUNT THE FRACTIONAL DIFFERENCES FROM BUFFS *?
+		// KEEP INTO aCCOUNT THE FRaCTIONaL DIFFERENCES FROM BUFFS *?
 		
 		case 0: //big enemy speed
 		global.rockSpeed += 0.3; 

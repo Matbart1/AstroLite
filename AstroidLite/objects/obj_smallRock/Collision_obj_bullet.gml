@@ -10,7 +10,7 @@ if(healthPoints <= 0)
 {
 	// dead!
 	var tempHitList = array_shuffle(hitList);
-	audio_play_sound(pitchAudio(tempHitList[0]), 1, false)
+	audio_play_sound(pitchaudio(tempHitList[0]), 1, false)
 
 	effect_create_above(ef_explosion, x, y, 1, c_white);
 
@@ -24,5 +24,5 @@ else
 {
 	// Not Dead!
 	var tempDent = array_shuffle(dentList);
-	audio_play_sound(pitchAudio(tempDent[0]), 1, false)
+	audio_play_sound(pitchaudio(tempDent[0]), 1, false)
 }

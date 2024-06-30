@@ -7,7 +7,7 @@ pointsForLevel = 300;
 
 
 randomize();
-tempAudio = array_shuffle(global.audioTracks);
+tempaudio = array_shuffle(global.audioTracks);
 
 gameTime = game_get_speed(gamespeed_fps);
 stepTimer = 0;

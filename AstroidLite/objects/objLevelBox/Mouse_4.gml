@@ -12,11 +12,11 @@ function common()
 			global.bulletDamage += 10;
 			break;
 		case 1:
-			//"Attack Speed (+2.5%)";
-			if global.bulletTime - 0.05 >= 0.05
-				global.bulletTime -= 0.025;
+			//"Attack Speed (+5%)";
+			if global.bulletTime - 0.05 >= 0.10
+				global.bulletTime -= 0.0125;
 			else 
-				global.bulletTime = 0.01;
+				global.bulletTime = 0.10;
 			break;
 		case 2:
 			//"Speed (+5%)";
@@ -52,10 +52,10 @@ function rare()
 			global.bulletDamage += 25;
 			break;
 		case 1:
-			//"Attack Speed (+5%)";
-			if global.bulletTime - 0.05 >= 0.05
-				global.bulletTime -= 0.05;
-			else global.bulletTime = 0.01;
+			//"Attack Speed (+10%)";
+			if global.bulletTime - 0.05 >= 0.10
+				global.bulletTime -= 0.025;
+			else global.bulletTime = 0.10;
 		case 2:
 			//"Speed (+10%)";
 			global.playerSpeed += 0.3;
@@ -102,10 +102,10 @@ function legendary()
 			global.bulletDamage += 50;
 			break;
 		case 1:
-			//"Attack Speed (+10%)";
-			if (global.bulletTime - 0.05) >= 0.05
-				global.bulletTime -= 0.10;
-			else global.bulletTime = 0.01;
+			//"Attack Speed (+20%)";
+			if (global.bulletTime - 0.05) >= 0.10
+				global.bulletTime -= 0.05;
+			else global.bulletTime = 0.10;
 			break;
 		case 2:
 			//"Speed (+15%)";
@@ -140,7 +140,7 @@ function legendary()
 			//"Tailgun (+2)";
 			if global.tailGunAmount < 10
 				global.tailGunAmount += 2;
-				global.bulletDamage *= 0.90;
+				global.bulletDamage *= 0.81;
 			break;
 	}
 }

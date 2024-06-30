@@ -6,7 +6,7 @@ draw_set_font(fntBigGameText);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-// Room width in game is 0.50 MAX, use this to split properly 
+// Room width in game is 0.50 MaX, use this to split properly 
 var multCalc = (currentPoints / pointsForLevel) * 100;
 
 draw_healthbar(room_width * 0.20, 4, room_width * 0.30, 22, multCalc,
@@ -16,7 +16,7 @@ draw_text_transformed(room_width * 0.25, 13,
 string_format(pointsForLevel - currentPoints, 0, 0),
 0.5, 0.5, 0);
 
-draw_text_transformed(room_width * 0.40, 13, $"Current Level: {global.playerProgression}", 0.5, 0.5, 0);
+draw_text_transformed(room_width * 0.40, 13, $"Current Level: {global.currentLevel}", 0.5, 0.5, 0);
 
 draw_set_color(#03ff89)
 
