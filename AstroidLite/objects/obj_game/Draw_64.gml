@@ -17,7 +17,7 @@ string_format(pointsForLevel - currentPoints, 0, 0),
 0.5, 0.5, 0);
 
 draw_text_transformed(room_width * 0.40, 12, $"Current Level:", 0.5, 0.5, 0);
-draw_set_color(#03ff89)
+draw_set_color(#03ff89);
 draw_text_transformed(room_width * 0.445, 13, global.currentLevel, 0.5, 0.5, 0);
 
 var stopWatch = string_replace_all(
@@ -25,13 +25,20 @@ string_format(hour, 2, 0) + ":" +
 string_format(minute, 2, 0) + ":" + 
 string_format(second, 2, 0), " ", "0");
 
-draw_text_transformed(room_width * 0.25, 40, stopWatch, 0.5, 0.5, 0);
+draw_text_transformed(room_width * 0.25, 40, $"({stopWatch})", 0.5, 0.5, 0);
 
 draw_set_alpha(global.warningOpacity);
 draw_text_transformed(room_width * 0.25, 350, warningText, 0.5, 0.5, 0);
+
+draw_set_alpha(global.headhunterOpacity);
+draw_set_color(#b30000);
+draw_text_transformed(room_width * 0.25, 400, headhunterText, 0.5, 0.5, 0);
+draw_set_color(#03ff89);
+
 draw_set_alpha(1);
 
 global.warningOpacity -= 0.007;
+global.headhunterOpacity -= 0.0035;
 
 
 

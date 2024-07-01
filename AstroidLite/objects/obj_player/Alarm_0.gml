@@ -228,7 +228,7 @@ switch global.tailGunAmount
 		global.bulletAngle -= 45
 		instance_create_layer(x, y, "Instances", obj_bullet);
 		global.bulletAngle += 15
-		instance_create_layer(x, y, "Instances", obj_bullet);
+		instance_create_layer (x, y, "Instances", obj_bullet);
 		global.bulletAngle += 15
 		instance_create_layer(x, y, "Instances", obj_bullet);
 		global.bulletAngle += 15

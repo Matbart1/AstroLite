@@ -30,8 +30,9 @@ function varReset()
 	global.playerReroll = 1;
 	global.Progression = 0;
 	global.currentLevel = 0;
-	global.acaling = 1.10;
+	global.scaling = 1.07;
 	global.warningOpacity = 0;
+	global.headhunterOpacity = 0;
 }
 
 varReset();

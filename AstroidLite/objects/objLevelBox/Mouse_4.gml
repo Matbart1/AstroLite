@@ -37,9 +37,9 @@ function common()
 			global.bulletSpeed += 1;
 			break;
 		case 6:
-			//"Enemy Speed (-10%)";
-			global.rockSpeed -= 0.10;
-			global.smallRockSpeed -= 0.10;
+			//"Enemy Speed (-15%)";
+			global.rockSpeed -= 0.15;
+			global.smallRockSpeed -= 0.15;
 			break;
 	}
 }
@@ -75,9 +75,9 @@ function rare()
 			global.bulletSpeed += 1;
 			break;
 		case 6:
-			//"Enemy Speed (-20%)";
-			global.rockSpeed -= 0.2;
-			global.smallRockSpeed -= 0.2;
+			//"Enemy Speed (-30%)";
+			global.rockSpeed -= 0.30;
+			global.smallRockSpeed -= 0.30;
 			break;
 		case 7:
 			//"Multishot (+1)";
@@ -126,9 +126,9 @@ function legendary()
 			global.bulletSpeed += 1.5;
 			break;
 		case 6:
-			//"Enemy Speed (-30%)";
-			global.rockSpeed -= 0.30;
-			global.smallRockSpeed -= 0.30;
+			//"Enemy Speed (-45%)";
+			global.rockSpeed -= 0.45;
+			global.smallRockSpeed -= 0.45;
 			break;
 		case 7:
 			//"Multishot (+2)";

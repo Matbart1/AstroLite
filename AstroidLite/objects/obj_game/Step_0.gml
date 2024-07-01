@@ -65,14 +65,14 @@ else
 			
 			// Increase experience required for next level
 			currentPoints = 0;
-			pointsForLevel = (pointsForLevel * global.acaling);
+			pointsForLevel = (pointsForLevel * global.scaling);
 			
-			// Every 15 levels, reduce the overall xp required by 1% (starts at 10%)
-			// at level 150, the amount of xp to level up will always be the same
-			if global.Progression > 15
+			// Every 15 levels, reduce the overall xp required by 1% (starts at 5%)
+			// at level 115, the amount of xp to level up will always be 1% more
+			if global.Progression > 15 && global.scaling > 1.01
 			{
 				global.Progression = 0;
-				global.acaling -= 0.01;
+				global.scaling -= 0.01;
 			}
 		}
 	}
@@ -102,25 +102,22 @@ if second >= 60
 	second -= 60;
 	if singleUpgradeLimit == 1 // minute reached, lets make the game much more difficult
 	{
-		warningText = "The Galaxy Enrages...";
+		var chosenText = irandom(11);
+		warningText = galaxyText[chosenText]
 		global.warningOpacity = 1;
 		singleUpgradeLimit = 0;
 		// buff everything
 		global.maxRockLimit += 1;
+		global.smallRockSpeed += 0.15;
+		global.rockSpeed += 0.15; 
+		global.bigRockHealth += 12.5;
+		global.smallRockHealth += 6.25;
+		
 		global.rockSpawnamount += 1;
-		global.smallRockSpeed += 0.3;
-		global.rockSpeed += 0.3; 
-		global.bigRockHealth += 25;
-		global.smallRockHealth += 15;
 		global.smallRockXp = (75 / global.rockSpawnamount);
 	}
 	
-	var randomRoll = irandom(100);
-	
-	if randomRoll >= 75
-	{
-		headHunterSpawn();
-	}
+	headHunterSpawn();
 }
 
 if minute >= 60
@@ -132,9 +129,17 @@ if minute >= 60
 if second == 30 && singleUpgradeLimit == 1 // half a minute reached, lets make the game more difficult
 {
 	singleUpgradeLimit = 0;
-	var randomDifficultyIncrease = irandom(3);
-	warningText = "The Galaxy Grows Stronger...";
+	var chosenText = irandom(11);
+	warningText = galaxyText[chosenText]
 	global.warningOpacity = 1;
+	
+	global.maxRockLimit += 1;
+	global.smallRockSpeed += 0.15;
+	global.rockSpeed += 0.15; 
+	global.bigRockHealth += 12.5;
+	global.smallRockHealth += 6.25;
+	/*
+	var randomDifficultyIncrease = irandom(3);
 	switch randomDifficultyIncrease
 	{
 		// KEEP INTO aCCOUNT THE FRaCTIONaL DIFFERENCES FROM BUFFS *?
@@ -159,13 +164,9 @@ if second == 30 && singleUpgradeLimit == 1 // half a minute reached, lets make t
 	    global.smallRockHealth += 15;
 		break;
 	}	
+	*/
 	
-	var randomRoll = irandom(100);
-	
-	if randomRoll >= 75
-	{
-		headHunterSpawn();
-	}
+	headHunterSpawn();
 }
 
 if second == 31
@@ -178,7 +179,13 @@ if second == 0
 
 function headHunterSpawn()
 {
-	var currentSpawn = irandom(1)
+	var randomRoll = irandom(100);
+	
+	if randomRoll >= 75
+	{
+
+		global.headhunterOpacity = 1;
+		var currentSpawn = irandom(1)
 		var tempLocX = array_shuffle(locationListX);
 		var tempLocY = array_shuffle(locationListY);
 		// This will place newly spawned rocks all around the edges of the game
@@ -196,4 +203,5 @@ function headHunterSpawn()
 		}
 		obj_headHunter.image_xscale = 1.5;
 		obj_headHunter.image_yscale = 1.5;
+	}
 }

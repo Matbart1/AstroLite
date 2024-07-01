@@ -6,6 +6,7 @@ event_inherited();
 
 if(room == MainMenu)
 {
+	varReset();
 	game_end();
 }
 if(room == HelpMenu)

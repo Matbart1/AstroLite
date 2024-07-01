@@ -21,9 +21,9 @@
 	// should constantly maintain a straight forward angle
 	global.bulletAngle = image_angle;
 
-	if mouse_check_button_pressed(mb_left)
+	if mouse_check_button_pressed(mb_right)
 		speed = global.playerSpeed * 2;	
 		
-	if mouse_check_button_released(mb_left)
+	if mouse_check_button_released(mb_right)
 		speed = global.playerSpeed;	
 }

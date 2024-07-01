@@ -17,7 +17,8 @@ hour = 0;
 
 singleUpgradeLimit = 1;
 
-warningText = "The Galaxy Grows Stronger...";
+warningText = "The galaxy grows stronger...";
+headhunterText = "The Headhunter has tracked your coordinates."
 
 locationListX = [
 -100,
@@ -27,4 +28,19 @@ room_width + 100
 locationListY = [
 -100,
 room_height + 100
+];
+
+galaxyText = [ // random(11)
+	"The galaxy enrages.",
+	"The universe grows angry.",
+	"The cosmos awakens.",
+	"The void intensifies.",
+	"The stars conspire.",
+	"The universe sharpens its claws.",
+	"The darkness deepens.",
+	"The nebulae pulse with power.",
+	"The celestial forces rally.",
+	"The ether grows hostile.",
+	"The astral tides surge.",
+	"The cosmos stirs with menace."
 ];
