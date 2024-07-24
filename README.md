@@ -18,14 +18,14 @@
 
 
 ## Development Roadmap for AstroLite:
-1.  ~~Custom voiced SFX!~~ Completed!
-2.  ~~Scalable gameplay, similar to Risk of Rain progression!~~ Completed!
-3.  ~~Upgrades! Like Vampire Survivors!~~ Completed!
+1.  ~~Custom voiced SFX!~~                                                            Completed!
+2.  ~~Scalable gameplay, similar to Risk of Rain progression!~~                       Completed!
+3.  ~~Upgrades! Like Vampire Survivors!~~                                             Completed!
 4.  ~~Custom artwork, hand drawn by somebody with no business hand drawing artwork!~~ Completed!
-5.  ~~8-bit music from various artists!~~ Added!
-6.  ~~Different quality of upgrades in-game (common, rare, legendary)~~ Completed!
+5.  ~~8-bit music from various artists!~~                                             Added!
+6.  ~~Different quality of upgrades in-game (common, rare, legendary)~~               Completed!
 7.  Challenge Modes to spice up gameplay and reward you with extra permanent shop currency!
-8.  Over 20 different special enemies that cycle in randomly each run! (5 currently)
+8.  Over 20 different special enemies that cycle in randomly each run!               (5 currently)
 9.  Secrets placed in different environments!
 10. Unique new playable characters that all have an exclusive quirk!
 
@@ -33,7 +33,7 @@
     
 © Mathieu Barrette - June 20, 2024
 
-Replication for purpose of profit and monetization strictly prohibited 
-Licenced under DBAD
+Replication for purpose of profit and monetization strictly prohibited<br />
+Licenced under DBAD<br />
 This repository exists for the sole purpose of playtesting and feedback, gameplay
 experiences here will not reflect the final product
